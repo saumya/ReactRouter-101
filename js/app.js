@@ -17,6 +17,7 @@ var Link = require('react-router').Link;
 var IndexRoute = require('react-router').IndexRoute;
 var hashHistory = require('react-router').hashHistory;
 // List of Components
+/*
 var App = React.createClass({
   render: function () {
     return (
@@ -34,47 +35,16 @@ var App = React.createClass({
       );
     }
 });
-/*
-var Dashboard = React.createClass({
-  render: function(){
-    return (
-      <div>
-        Dashboard
-      </div>
-    );
-  }
-});
-var One = React.createClass({
-  render: function () {
-    console.log('One : render');
-    return (
-      <div> One </div>
-    );
-  }
-});
-var Two = React.createClass({
-  render: function () {
-    console.log('Two : render');
-    return (
-      <div> Two </div>
-    );
-  }
-});
 */
-
-//var Dashboard = require('./components/dashboard.react');
-//var One = require('./one.react');
-//var Two = require('./components/two.react');
+//
 var Home = require('./components/home.react');
 var PageOne = require('./components/pageOne.react');
 var PageTwo = require('./components/pageTwo.react');
-
-
+var AppEntry = require('./components/appEntry.react');
 // Routing
-
 // Route declaration : type : 1
 var routes = (
-              <Route path="/" component={App}>
+              <Route path="/" component={AppEntry}>
                 <IndexRoute component={Home} />
                 <Route path="one" component={PageOne} />
                 <Route path="two" component={PageTwo} />
