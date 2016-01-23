@@ -21,7 +21,7 @@ var App = React.createClass({
   render: function () {
     return (
       <div>
-        <h2>Route</h2>
+        <h2>React Route</h2>
         <ul>
           <li> <Link to='/one'> One </Link> </li>
           <li> <Link to='/two'> Two </Link> </li>
@@ -34,6 +34,7 @@ var App = React.createClass({
       );
     }
 });
+/*
 var Dashboard = React.createClass({
   render: function(){
     return (
@@ -59,14 +60,24 @@ var Two = React.createClass({
     );
   }
 });
+*/
+
+//var Dashboard = require('./components/dashboard.react');
+//var One = require('./one.react');
+//var Two = require('./components/two.react');
+var Home = require('./components/home.react');
+var PageOne = require('./components/pageOne.react');
+var PageTwo = require('./components/pageTwo.react');
+
+
 // Routing
 
 // Route declaration : type : 1
 var routes = (
               <Route path="/" component={App}>
-                <IndexRoute component={Dashboard} />
-                <Route path="one" component={One} />
-                <Route path="two" component={Two} />
+                <IndexRoute component={Home} />
+                <Route path="one" component={PageOne} />
+                <Route path="two" component={PageTwo} />
               </Route>
             );
 
@@ -83,7 +94,6 @@ var routes = {
 */
 //
 ReactDOM.render(
-  <Router routes={routes} history={hashHistory}>
-  </Router>,
+  <Router routes={routes} history={hashHistory} />,
   document.getElementById('react-app')
 );
