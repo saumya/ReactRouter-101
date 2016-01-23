@@ -1,13 +1,6 @@
 // Application Entry
 var React = require ('react');
 var ReactDOM = require ('react-dom');
-/*
-// Basic rendering
-ReactDOM.render(
-  <div>Welcome to React ion</div>,
-  document.getElementById('react-app')
-);
-*/
 // Let's use Routes
 // not using an ES6 transpiler
 var Router = require('react-router').Router;
@@ -17,26 +10,6 @@ var Link = require('react-router').Link;
 var IndexRoute = require('react-router').IndexRoute;
 var hashHistory = require('react-router').hashHistory;
 // List of Components
-/*
-var App = React.createClass({
-  render: function () {
-    return (
-      <div>
-        <h2>React Route</h2>
-        <ul>
-          <li> <Link to='/one'> One </Link> </li>
-          <li> <Link to='/two'> Two </Link> </li>
-        </ul>
-        {
-          //renders the children
-          this.props.children
-        }
-      </div>
-      );
-    }
-});
-*/
-//
 var Home = require('./components/home.react');
 var PageOne = require('./components/pageOne.react');
 var PageTwo = require('./components/pageTwo.react');
@@ -55,10 +28,10 @@ var routes = (
 // Route declaration : type : 2
 var routes = {
   path: '/',
-  component: App,
+  component: AppEntry,
   childRoutes: [
-    { path: 'one', component: One },
-    { path: 'two', component: Two },
+    { path: 'one', component: PageOne },
+    { path: 'two', component: PageTwo },
   ]
 }
 */
